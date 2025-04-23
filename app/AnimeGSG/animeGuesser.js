@@ -12,8 +12,8 @@ async function fetchCharacterData(animeId) {
   const { data } = await response.json();
 
   // can make the guesser harder by including the all different character and not just main character.
-  const acharacters = data.filter((char) => char.character.images?.jpg?.image_url);
-  //const acharacters = data.filter((char) => char.role === "Main" && char.character.images?.jpg?.image_url);
+  //const acharacters = data.filter((char) => char.character.images?.jpg?.image_url);
+  const acharacters = data.filter((char) => char.role === "Main" && char.character.images?.jpg?.image_url);
   const animech = acharacters.length ? acharacters : data.filter((char) => char.character.images?.jpg?.image_url);
 
   if (!animech.length) throw new Error("No characters with image");
