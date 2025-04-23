@@ -7,5 +7,3 @@ export default function AnimeGuessPage() {
     </main>
   );
 }
-// can make the guesser harder by including the all different character and not just main character.
-  //const acharacters = data.filter((char) => char.character.images?.jpg?.image_url);

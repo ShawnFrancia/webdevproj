@@ -11,7 +11,9 @@ async function fetchCharacterData(animeId) {
   if (!response.ok) throw new Error("Failed to get character data from the API");
   const { data } = await response.json();
 
-  const acharacters = data.filter((char) => char.role === "Main" && char.character.images?.jpg?.image_url);
+  // can make the guesser harder by including the all different character and not just main character.
+  const acharacters = data.filter((char) => char.character.images?.jpg?.image_url);
+  //const acharacters = data.filter((char) => char.role === "Main" && char.character.images?.jpg?.image_url);
   const animech = acharacters.length ? acharacters : data.filter((char) => char.character.images?.jpg?.image_url);
 
   if (!animech.length) throw new Error("No characters with image");
@@ -192,16 +194,14 @@ export default function AnimeGuesser() {
             <div className="mt-4">
               {showFirstLetterHint && (
                 <p
-                  className="text-black font-semibold p-3 rounded-md text-center underline decoration-white"
-                  style={{ textShadow: "0 1px 3px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)" }}
+                  className="text-white p-4 rounded-md text-center underline decoration-black decoration-4 text-sm"
                 >
                   First Letters: {getFirstLetterHint(character.fullName)}
                 </p>
               )}
               {showAnimeHint && (
                 <p
-                  className="text-black font-semibold p-3 rounded-md mt-2 text-center underline decoration-white"
-                  style={{ textShadow: "0 1px 3px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5)" }}
+                  className="text-white  p-4 rounded-md mt-2 text-center underline decoration-black decoration-4 text-sm"
                 >
                   From Anime: {character.anime}
                 </p>

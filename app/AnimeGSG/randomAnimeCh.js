@@ -1,63 +1,20 @@
-// list of popular anime because due to alot of anime within the api some anime characters are missing certain detials
+// list of popular anime because due to a lot of anime within the API, some anime characters are missing certain details
 export const POPULAR_ANIME_ID = [
-    1,    // Cowboy Bebop
-    5,    // Samurai Champloo
-    20,   // Naruto
-    21,   // One Piece
-    30,   // Neon Genesis Evangelion
-    199,  // Trigun
-    1535, // Death Note
-    1575, // Code Geass: Lelouch of the Rebellion
-    9253, // Steins;Gate
-    11061, // Hunter x Hunter (2011)
-    16498, // Attack on Titan
-    31964, // My Hero Academia
-    32281, // Your Name
-    37991, // Demon Slayer: Kimetsu no Yaiba
-    38000, // Dr. Stone
-    40028, // Jujutsu Kaisen
-    40748, // Attack on Titan: The Final Season
-    40750, // Redo of Healer
-    47917, // Chainsaw Man
-    51019, // Spy x Family
-    52991, // Frieren: Beyond Journey's End
-    15451, // High School DxD
-    23233, // The Testament of Sister New Devil
-    8074,  // Highschool of the Dead
-    7593,  // Kiss x Sis
-    31845,
-    12549,
-    28171, // Shokugeki no Souma (Food Wars)
-    30240, // Prison School
-    59457, // Rent-a-Girlfriend
-    59452, // The Country Bumpkin or RSMT
-    52299, // Solo Leveling
-    11757,
-    48316,
-    10793,
-    44511,
-    30544,
-    31338,
-    42897,
-    14813,
-    30015,
-    30296,
-    40530,
-    53111,
-    57066,
-    37348,
-    57181,
-    45613,
-    49613,
-    40496,
-    51180,
-    51096,
-    35507,
-    37430,
-    39799,
-    41461
+    1, 5, 20, 21, 30, 199, 1535, 1575,
+    9253, 11061, 16498, 31964, 32281, 37991, 38000, 40028,
+    40748, 40750, 47917, 51019, 52991, 15451, 23233, 8074,
+    7593, 31845, 12549, 28171, 30240, 59457, 59452, 52299,
+    11757, 48316, 10793, 44511, 30544, 31338, 42897, 14813,
+    30015, 30296, 40530, 53111, 57066, 37348, 57181, 45613,
+    49613, 40496, 51180, 51096, 35507, 37430, 39799, 41461,
+    30276, 46569, 34300, 49778, 55071, 58359, 54492, 52588,
+    26243, 37999, 37504, 28851, 38883, 49596, 41457, 52215,
+    56752, 38671, 48580, 51632, 34497, 42310, 29803, 31240,
+    35790, 7054, 47790, 48761, 50306, 51462, 33255, 41006,
+    47194, 226, 16592, 33950, 10620, 36882, 54744, 41094,
+    58059, 41710, 35849, 38101, 33487, 34934
 ];
-  
+
 export async function getRandomAnimeId() {
     const index = Math.floor(Math.random() * POPULAR_ANIME_ID.length);
     return POPULAR_ANIME_ID[index].toString();
