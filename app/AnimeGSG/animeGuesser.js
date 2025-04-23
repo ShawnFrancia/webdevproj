@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getFirstLetterHint } from "./hint";
 import { getRandomAnimeId } from "./randomAnimeCh";
 import Link from "next/link";
+import Image from "next/image"; 
 
 async function fetchCharacterData(animeId) {
   const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/characters`);
@@ -115,10 +116,13 @@ export default function AnimeGuesser() {
           <>
             {character.image && (
               <div className="relative mb-4">
-                <img
+                <Image
                   src={character.image}
                   alt="Character"
-                  className="w-250px h-350px object-cover rounded-lg shadow-lg border-4 border-purple-500"
+                  width={250} 
+                  height={350}
+                  className="object-cover rounded-lg shadow-lg border-4 border-purple-500"
+                  style={{ width: '250px', height: '350px' }} 
                 />
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/70 to-transparent rounded-lg"></div>
               </div>
