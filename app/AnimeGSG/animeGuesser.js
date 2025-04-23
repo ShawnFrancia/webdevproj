@@ -140,7 +140,7 @@ export default function AnimeGuesser() {
             )}
             {result === "incorrect" && (
               <p className="text-red-400 text-xl font-bold mb-4">
-                 バカ野郎! Try again or give up, but deku never gave up to become the number one hero so you shouldnt aswell min'na-san.
+                 バカ野郎! Try again or give up, but deku never gave up to become the number one hero so you should not aswell min na-san.
               </p>
             )}
 
