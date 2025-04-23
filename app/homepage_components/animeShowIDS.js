@@ -106,22 +106,3 @@ export const ACTUAL_ANIME_ID = [
     1202, 1203, 1204, 1205, 1206, 1207, 1208, 1209, 1210, 1211, 
 ]
 
-/*
-{
-  "data": {
-    "mal_id": 1,
-    "title": "Cowboy Bebop",
-    "synopsis": "In the year 2071...",
-    "score": 8.77,
-    "images": {
-      "jpg": {
-        "image_url": "https://cdn.myanimelist.net/images/anime/4/19644.jpg"
-      }
-    },
-    "type": "TV",
-    "episodes": 26,
-    "status": "Finished Airing",
-    "rating": "R - 17+ (violence & profanity)"
-  }
-}
-*/
